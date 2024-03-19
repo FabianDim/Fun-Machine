@@ -9,7 +9,10 @@ int calculateOdds() {
     double val = (double)rand() / RAND_MAX;
     
     if(val < 0.05) {
-        random = 0;
+        random = 100;
+    }
+    if(val < 0.1) {
+        random = 40;
     }
     else if (val < 0.25){
         random = 1;
@@ -18,10 +21,18 @@ int calculateOdds() {
         random = 2;
     }
     else {
-        random = 3;
+        random = 0;
     }
 return random;
 }
+
+int playerInput(int bet) {
+    std::cout << "What bet would you like to place? ";
+    std::cin >> bet;
+    return bet;
+}
+
+
 
 int main() {
 }
